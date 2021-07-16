@@ -16,11 +16,11 @@
 - Events page: show all the events which are added by this user
 - Profile Dashboard: user can see options to add/ edit events,modify/update profile, change password
 
-Technology Used : Laravel PHP
-Database used :mysql
-Database file : .env
-Framework / CMS :laravel Framework version 8
-Test Login Details : 
+- Technology Used : Laravel PHP
+- Database used :mysql
+- Database file : .env
+- Framework / CMS :laravel Framework version 8
+- Test Login Details : 
  - email - admin@gmail.com 
  - password - 12345678
  - only admin access not user access

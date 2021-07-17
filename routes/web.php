@@ -20,8 +20,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [WebsiteController::class, 'show']);
+
 Route::get('event',[EventController::class, 'website']);
 Route::get('event_deatiles/{id}',[EventController::class, 'event_deatiles']);
+
+Route::group(['middleware' => ['IsAdmin','auth']], function () {
 Route::get('event_create',[EventController::class, 'create']);
 Route::post('event-store', [EventController::class, 'store']);
 Route::get('event_list', [EventController::class, 'index']);
@@ -40,4 +43,5 @@ Route::get('user_profile', [UserController::class, 'user_profile']);
 Route::post('profile_update', [UserController::class, 'user_profile_update']);
 Route::get('profile_password', [UserController::class, 'user_password']);
 Route::post('password_update', [UserController::class, 'password_update']);
+});
 Route::post('search', [EventController::class, 'search']);
